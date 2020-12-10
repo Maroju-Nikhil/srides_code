@@ -1,0 +1,60 @@
+ <style type="text/css">
+    @media screen and (max-width: 600px) {
+      #now,#now1{
+        width: 80%;
+        height: 24%;
+        overflow: scroll;
+      }
+      .card{
+        width: 90%;
+      }
+   }
+    @media screen and (min-width: 1080px){
+      #now1{
+        width: 60%;
+      }
+      #now{
+        width: 30%;
+      }
+      .card{
+        width: 60%;
+         height: 100%;
+      }
+    }
+    #bike{
+      float: left;
+       width: 25%;
+        height: 20%;
+        margin-left: 7%;
+        margin-top: 0%;
+        padding-right: 5%;
+        z-index: 2;
+    }
+    #scooter{
+      float: left;
+        width: 25%;
+        height: 20%;
+        margin-left: 8%;
+        margin-top: 0%;
+        padding-right: 5%;
+        z-index: 2;
+      }
+      #car{
+        float: right;
+        width: 30%;
+        height: 40%;
+        margin-top: -1%;  
+        padding-right:5%;
+        z-index: 2;
+      }
+      .bikecar{
+        width: 100%;
+        height: 150%;
+      }
+       .o{
+          background-image: url('https://source.unsplash.com/1600x900/?journey,car');
+       }
+       .t{
+           background-image: url('https://source.unsplash.com/1600x900/?flower');
+       }
+    </style>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      @media screen and (max-width: 600px) {
+        #now,#now1{
+          width: 80%;
+          height: 24%;
+          overflow: scroll;
+        }
+        .card{
+          width: 90%;
+        }
+     }
+      @media screen and (min-width: 1080px){
+        #now1{
+          width: 60%;
+        }
+        #now{
+          width: 30%;
+        }
+        .card{
+          width: 60%;
+           height: 100%;
+        }
+      }
+      #bike{
+        float: left;
+         width: 25%;
+          height: 20%;
+          margin-left: 7%;
+          margin-top: 0%;
+          padding-right: 5%;
+          z-index: 2;
+      }
+      #scooter{
+        float: left;
+          width: 25%;
+          height: 20%;
+          margin-left: 8%;
+          margin-top: 0%;
+          padding-right: 5%;
+          z-index: 2;
+        }
+        #car{
+          float: right;
+          width: 30%;
+          height: 40%;
+          margin-top: -1%;  
+          padding-right:5%;
+          z-index: 2;
+        }
+        .bikecar{
+          width: 100%;
+          height: 150%;
+        }
+         .o{
+            background-image: url('https://source.unsplash.com/1600x900/?journey,car');
+         }
+         .t{
+             background-image: url('https://source.unsplash.com/1600x900/?flower');
+         }
+      </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>SRides</title>
+  </head>
+  <body>
+    <div
+      style="position: relative; left: 0; right: 0; height: 900px"
+      id="background"
+      class="o"
+    >
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img
+            src="srides_logo.png"
+            width="57"
+            height="35"
+            class="d-inline-block align-top"
+            alt=""
+            loading="lazy"
+          />&emsp;&emsp;SRides<br />
+          <small class="text-muted">
+            <cite title="Source Title" style="color: #fff"
+              >Safe ride to your destiny..</cite
+            >
+          </small>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" tabindex="-1"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1">Contact us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-outline-light my-2 my-sm-0"
+              data-toggle="modal"
+              data-target="#staticBackdrop"
+            >
+              <i class="fa fa-user-plus" aria-hidden="true"></i> Sign up
+            </button>
+            &emsp;&emsp;
+            <button
+              type="button"
+              class="btn btn-outline-light my-2 my-sm-0"
+              data-toggle="modal"
+              data-target="#staticback"
+            >
+              <i class="fa fa-user" aria-hidden="true"></i> Login
+            </button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- Dismissable alert -->
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <br />
+        <h3>Coronavirus (COVID-19) resources and updates</h3>
+        <br />
+        The safety and well-being of everyone who uses SRides is always our
+        priority. We are actively monitoring the coronavirus (COVID-19)
+        situation and are taking steps to help keep our communities safe.
+        <a
+          href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjzy6Koj7HqAhWPHSsKHbUMCp8YABAAGgJzZg&ohost=www.google.com&cid=CAESQOD2CHHj4DdOJm5d_GREuOZc7uxiTdtAx7Ma9yG4bileI8nRckkRo3TUscWvz0ATUE096FlNAQqYJOhVhW3gVpg&sig=AOD64_2dxqs_iDMarYxbluHpBKskpxkLtA&q=&ved=2ahUKEwjpz5moj7HqAhXAxzgGHQVdCrQQ0Qx6BAgOEAE&adurl="
+          target="_blank"
+          ><br />Click here for more information.</a
+        >
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Close dismissable alert -->
+
+      <!-- Grid in bootstrap -->
+      <div
+        class="row"
+        id="now1"
+        style="
+          position: relative;
+          margin-left: 10%;
+          margin-top: 5%;
+          background-color: #fff;
+          padding: 0%;
+        "
+      >
+        <div class="col-12 col-md-12">
+          <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="pills-earn-tab"
+                data-toggle="pill"
+                href="#pills-earn"
+                role="tab"
+                aria-controls="pills-earn"
+                aria-selected="true"
+                style="width: 100%; height: 100%; text-align: center"
+                ><b
+                  ><i
+                    class="fa fa-address-card"
+                    aria-hidden="true"
+                    style="font-size: 200%; color: black"
+                  ></i
+                  ><br />Earn</b
+                ></a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-home-tab"
+                data-toggle="pill"
+                href="#pills-home"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="false"
+                style="width: 100%; height: 100%; text-align: center"
+                ><b
+                  ><i
+                    class="fa fa-car"
+                    aria-hidden="true"
+                    style="font-size: 200%; color: black"
+                  ></i
+                  ><br />Ride<br /></b
+              ></a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-profile-tab"
+                data-toggle="pill"
+                href="#pills-profile"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+                style="width: 100%; height: 100%; text-align: center"
+                ><b
+                  ><i
+                    class="fa fa-motorcycle"
+                    aria-hidden="true"
+                    style="font-size: 200%; color: black"
+                  ></i
+                  ><br />Bike<br /></b
+              ></a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="pills-contact-tab"
+                data-toggle="pill"
+                href="#pills-contact"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+                style="width: 100%; height: 100%; text-align: center"
+                ><b
+                  ><i
+                    class="fa fa-briefcase"
+                    ari
+                    style="font-size: 200%; color: black"
+                  ></i
+                  ><br />Work</b
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Grid close -->
+
+      <div
+        class="row"
+        id="now"
+        style="
+          position: relative;
+          margin-left: 10%;
+          background-color: #fff;
+          padding: 2%;
+        "
+      >
+        <div class="col-12 col-md-10">
+          <br /><br />
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-earn"
+              role="tabpanel"
+              aria-labelledby="pills-earn-tab"
+            >
+              <h1>Get in the driver's seat and get paid</h1>
+              <br />
+              Drive on the platform with the largest network of active riders.
+              <br /><br />
+              <center>
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  data-toggle="modal"
+                  data-target="#staticBackdrop"
+                  style="width: 40%"
+                >
+                  Sign up</button
+                ><br />
+              </center>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-home"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+            >
+              <h1>Request a Ride now.</h1>
+              <br />
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control bg-light"
+                  placeholder="Enter a pickup location"
+                  aria-label="pickup"
+                  aria-describedby="basic-addon1"
+                /><i
+                  class="fa fa-location-arrow fa-lg"
+                  style="position: relative; right: 7%; margin-top: 3%"
+                  aria-hidden="true"
+                ></i>
+                <br /><br />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control bg-light"
+                  placeholder="Enter a destination"
+                  aria-label="destination"
+                  aria-describedby="basic-addon1"
+                /><i
+                  class="fa fa-map-marker fa-lg"
+                  style="position: relative; right: 7%; margin-top: 3%"
+                  aria-hidden="true"
+                ></i>
+                <br /><br />
+              </div>
+              <button type="button" class="btn btn-dark" style="width: 40%">
+                Request now</button
+              >&emsp;&emsp;
+              <button
+                type="button"
+                class="btn btn-dark"
+                style="width: 40%"
+                disabled
+              >
+                Schedule for later
+              </button>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+            >
+              <h1>Bike or scoot there, with JUMP</h1>
+              Go farther and have more fun with electric bikes and scooters.<br /><br />
+              <button type="button" class="btn btn-dark" style="width: 50%">
+                Get a Ride
+              </button>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-contact"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab"
+            >
+              <h1>Put your skills to work</h1>
+              Download the new Uber Works app and make money as a prep cook,
+              customer service associate, and more.<br /><br />
+              <button type="button" class="btn btn-dark" style="width: 50%">
+                Find work
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      style="display: inline-block; background-color: lightgrey"
+      class="bikecar mb-3"
+    >
+      <br />
+      <h1>Setting 900+ cities in motion</h1>
+      <a href="#" style="color: black">View more cities.</a><br />
+      <img src="bike.svg" id="bike" />
+      <img src="scooter.svg" id="scooter" />
+      <img src="car3.svg" style="transform: rotateY(180deg)" id="car" />
+    </div>
+    <hr
+      style="
+        border: 2px solid black;
+        width: 98%;
+        z-index: 3;
+        margin-top: -8%;
+        perspective: 100px;
+      "
+    />
+
+    <br /><br /><br /><br />
+
+    <center>
+      <div class="card mb-3">
+        <div class="row no-gutters" style="width: 90%">
+          <div class="col-md-4">
+            <img
+              src="safety.svg"
+              class="card-img"
+              alt="..."
+              style="height: 100%; width: 110%"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><h1>Our commitment to your safety</h1></h5>
+              <p class="card-text">
+                With every safety feature we add and every standard in our
+                Community Guidelines we uphold, we're committed to working to
+                create a safe environment for our users.<br />
+                Learn more about our Community Guidelines<br />
+                See all safety features
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+
+    <br />
+    <div style="display: flex">
+      <div class="card mb-3" style="max-width: 30%; margin-left: 15%">
+        <div class="card-header"><img src="newsroom.svg" /></div>
+        <div class="card-body text-dark">
+          <h5 class="card-title">Newsroom</h5>
+          <p class="card-text">
+            See announcements about our latest releases, initiatives, and
+            partnerships.<a href="#">Learn more.</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 30%; margin-left: 10%">
+        <div class="card-header"><img src="global.svg" /></div>
+        <div class="card-body text-dark">
+          <h5 class="card-title">Global Citizenship</h5>
+          <p class="card-text">
+            Read about our commitment to making a positive impact in the cities
+            we serve.<a href="#">Learn more.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small stylish-color pt-4 bg-dark">
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <hr class="clearfix w-100 d-md-none" />
+          <div class="col-md-2 mx-auto"></div>
+        </div>
+      </div>
+      <hr />
+
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1" style="color: #fff">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <button
+            type="button"
+            class="btn btn-info my-2 my-sm-0"
+            data-toggle="modal"
+            data-target="#staticBackdrop"
+          >
+            Sign up!
+          </button>
+        </li>
+      </ul>
+      <!-- Call to action -->
+      <hr />
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center" style="color: #fff">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3" style="color: #fff">
+        © 2020 Copyright:
+        <a href="#"> SRrides.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom01">First name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom01"
+                    value="Mark"
+                    required
+                  />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom02">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom02"
+                    value="Otto"
+                    required
+                  />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationCustom03">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom03"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationCustom04">State</label>
+                  <select
+                    class="custom-select"
+                    id="validationCustom04"
+                    required
+                  >
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationCustom05">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom05"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+
+            <script>
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+              (function () {
+                "use strict";
+                window.addEventListener(
+                  "load",
+                  function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName(
+                      "needs-validation"
+                    );
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(
+                      forms,
+                      function (form) {
+                        form.addEventListener(
+                          "submit",
+                          function (event) {
+                            if (form.checkValidity() === false) {
+                              event.preventDefault();
+                              event.stopPropagation();
+                            }
+                            form.classList.add("was-validated");
+                          },
+                          false
+                        );
+                      }
+                    );
+                  },
+                  false
+                );
+              })();
+
+              $(function () {
+                $("#pills-home-tab").click(function () {
+                  $("#background").toggleClass("t");
+                });
+              });
+            </script>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticback"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdrop">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal close -->
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+more....
